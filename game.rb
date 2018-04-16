@@ -11,7 +11,7 @@ get '/' do
 end
 
 get '/:hand1/:hand2' do
-    @game_result = RockPaperScissors(params[:hand1], params[:hand2])
+    @game_result = RockPaperScissors.play(params[:hand1], params[:hand2])
     erb(:result)
 end
 
